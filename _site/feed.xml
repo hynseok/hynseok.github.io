@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>hynseok 블로그</title>
+  <title>hynseok blog</title>
   <subtitle>hynseok 블로그, 공부, 기록</subtitle>
-  <updated>2024-04-29T23:40:11+09:00</updated>
+  <updated>2024-04-30T00:03:27+09:00</updated>
   <author>
     <name>Hyun Seok, Kim</name>
     <uri>http://localhost:4000/</uri>

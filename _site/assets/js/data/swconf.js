@@ -1,6 +1,6 @@
 const swconf = {
   
-    cacheName: 'chirpy-1714401611',resources: [
+    cacheName: 'chirpy-1714403008',resources: [
       '/assets/css/jekyll-theme-chirpy.css',
       '/',
       
@@ -16,8 +16,6 @@ const swconf = {
       
       
     ],allowHosts: [
-      
-        'chirpy-img.netlify.app',
       
           'fonts.googleapis.com',
           'fonts.gstatic.com',
