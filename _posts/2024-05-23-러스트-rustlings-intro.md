@@ -3,7 +3,7 @@ title: 러스트 rustlings intro
 date: 2024-05-24 12:15:33 +0900
 categories: [rust]
 tags: [rust, rustlings]
-description: rust, rustlings, hynseok
+description: rust, rustlings, formatted print
 ---
 
 # rustlings - intro
