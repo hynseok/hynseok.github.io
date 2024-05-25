@@ -1,6 +1,6 @@
 ---
-title: 러스트 rustlings intro
-date: 2024-05-24 12:15:33 +0900
+title: '[러스트] rustlings intro'
+date: 2024-05-23 12:15:33 +0900
 categories: [rust]
 tags: [rust, rustlings]
 description: rust, rustlings, formatted print
@@ -18,7 +18,7 @@ println 매크로는 formatted macro의 한 종류로, `std::fmt`에 정의되�
 * eprint! : print!와 동일하나, stderr에 출력한다.
 * eprintln! : println!과 동일하나, stderr에 출력한다.
 
-## intro promlems
+## intro exercises
 ### intro2
 ```
 fn main() {
