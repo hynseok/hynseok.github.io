@@ -1,8 +1,8 @@
 ---
 title: '[러스트] rustlings variables'
 date: 2024-05-24 14:27:33 +0900
-categories: [rust]
-tags: [rust, rustlings]
+categories: [Rust]
+tags: [Rust, rustlings]
 description: rust, rustlings, variables
 ---
 

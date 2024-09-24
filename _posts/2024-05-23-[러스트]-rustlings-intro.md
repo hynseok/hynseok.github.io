@@ -1,8 +1,8 @@
 ---
 title: '[러스트] rustlings intro'
 date: 2024-05-23 12:15:33 +0900
-categories: [rust]
-tags: [rust, rustlings]
+categories: [Rust]
+tags: [Rust, rustlings]
 description: rust, rustlings, formatted print
 ---
 
