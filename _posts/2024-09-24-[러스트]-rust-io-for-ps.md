@@ -110,7 +110,7 @@ fn main() {
 ```
 우선 Stdin 구조체에 대해 살펴봅시다. Stdin 구조체는 하나의 stdin 핸들러를 멤버로 가지고 있습니다. `Stdin.new()`를 통해 새로운 구조체를 할당받게 되면 기본 stdin 핸들러에 lock을 적용하고, 입력 버퍼를 사용하는 BufReader가 저장이 됩니다. (stdin 변수를 동일하게 여러번 선언하는 것은 shadowing 입니다. [참고](https://hynseok.github.io/posts/%EB%9F%AC%EC%8A%A4%ED%8A%B8-rustlings-variables/#shadowing)) 이후 `read_line()`메서드를 통해 입력되는 한 줄을 String 형태로 받을 수 있습니다.
 
-Stdout 구조체도 마찬가지로 버퍼를 사용하는 BufWriter를 사용합니다. `writeln()`메서드로 하나의 String 오브젝트를 한 줄에 출력할 수 있습니다.
+Stdout 구조체도 마찬가지로 버퍼를 사용하는 BufWriter를 사용합니다. `write_line()`메서드로 하나의 String 오브젝트를 한 줄에 출력할 수 있습니다.
 
 ## PS
 위 구조체 template를 [깃허브](https://github.com/hynseok/ps-template)에 업로드하였습니다. 
