@@ -1,5 +1,5 @@
 ---
-title: "[pwnable] Rust IO for Problem Solving "
+title: "[pwnable] fd, collision, bof"
 date: 2024-09-24 22:56:00 +0900
 categories: [pwnable]
 tags: [pwnable]
