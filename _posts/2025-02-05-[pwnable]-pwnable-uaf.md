@@ -8,7 +8,7 @@ description: pwnable, system hack
 
 # vtable, vptr
 
-![alt text](uaf/image.png)
+![alt text](assets/img/uaf/image.png)
 c++ class에서 virtual 키워드를 통해 함수를 생성하면 vptr이라는 멤버(포인터)가 자동으로 추가됩니다.  
 메모리 레이아웃에서 vptr은 가장 처음에 위치합니다.
 
@@ -107,19 +107,19 @@ new 키워드로 새로운 문자 배열을 동적할당합니다.
 
 # 바이너리 분석
 
-![alt text](uaf/image-1.png)
+![alt text](assets/img/uaf/image-1.png)
 gdb-peda에서는 vmmap 명령어로 프로세스의 메모리 영역을 확인할 수 있습니다.  
 동적 할당되는 heap 메모리 영역의 주소를 확인해야 합니다.
 
-![alt text](uaf/image-2.png)
+![alt text](assets/img/uaf/image-2.png)
 프로그램을 실행시켜 보면서 스택과 레지스터의 값들을 확인해보니  
 heap 영역의 Woman 객체가 `0x401550` 주소를 기반으로 introduce 함수를 호출하는 것을 확인할 수 있었습니다.
 
-![alt text](uaf/image-4.png)
+![alt text](assets/img/uaf/image-4.png)
 0x401550 근처의 값들을 조사해 보니 0x0040117a에 위치한 코드가 give_shell 함수이고,  
 0x401550 주소를 기준으로 +8을 하여 introduce 함수를 실행시키는 것을 확인할 수 있었습니다.
 
-![alt text](uaf/image-6.png)
+![alt text](assets/img/uaf/image-6.png)
 w,m이 있는 곳 근처의 heap 영역의 값을 직접 조사해 보니 0x19, 0x15 등 age와, 0x614ec8의 주소(해당 주소에는 name 문자열이 있음)가 보였습니다.    
 
 0x401570, 0x401550 이 vptr이라고 가정했을 때, Woman과 Man 클래스가 24바이트 크기임을 알 수 있었습니다.
