@@ -1,6 +1,6 @@
 ---
 title: "[pwnable] uaf"
-date: 2025-02-05 23:56:00 +0900
+date: 2025-02-05 07:00:00 +0900
 categories: [pwnable]
 tags: [pwnable]
 description: pwnable, system hack
