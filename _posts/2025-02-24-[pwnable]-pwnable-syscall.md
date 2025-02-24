@@ -86,7 +86,9 @@ kallsyms 헤더파일이 존재하지 않았습니다.
 `commit_creds` 함수 마지막의 `0x6c` 는 sys_upper함수에서 알파벳 소문자로 판단되어 `0x20`을 빼게 됩니다. 이를 우회하기 위해 0x8003f560을 chmod 시스템콜의 위치에 덮어씌우고, 0x8003f560에서 12바이트를 nop으로 덮어씌웁니다.   
 
 ![alt text](assets/img/syscall/image-14.png)
-  
+arm 아키텍쳐에서 nop 명령어는 `mov r0, r0` 등으로 구현할 수 있습니다.
+`mov r1, r1`의 opcode는 `0xe1a01001` 입니다.
+
 ```c
 #include <unistd.h>
 #include <sys/syscall.h>
@@ -132,31 +134,5 @@ int main() {
 ``` -->
 
 ![alt text](assets/img/syscall/image-13.png)
-<!-- ```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/syscall.h>
-#include <string.h>
 
-#define SYS_upper 223
-
-int main(void) {
-    char input[] = "hello, world!";
-    char output[sizeof(input)];
-
-    long ret = syscall(SYS_upper, input, output);
-
-    if(ret < 0) {
-        perror("sys_upper");
-        exit(EXIT_FAILURE);
-    }
-
-    printf("original: %s\n", input);
-    printf("upper: %s\n", output);
-
-    return 0;
-}
-```
-223번 시스템콜로 등록을 하였기에, syscall 함수에 223과 인자를 전달해 주면 사용을 할 수 있습니다. -->
 
